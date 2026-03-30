@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
-<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="https://raw.githubusercontent.com/zznazzy/assn4/main/NationalParks"
+           xmlns="https://raw.githubusercontent.com/zznazzy/assn4/main/NationalParks"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified">
   <xs:element name="NationalParks">
     <xs:complexType>
       <xs:sequence>
@@ -11,17 +15,17 @@
               <xs:element name="Address">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="Number" type="xs:int" />
+                    <xs:element name="Number" type="xs:string" />
                     <xs:element name="Street" type="xs:string" />
                     <xs:element name="City" type="xs:string" />
                     <xs:element name="State" type="xs:string" />
-                    <xs:element name="Zip" type="xs:int" />
+                    <xs:element name="Zip" type="xs:string" />
                   </xs:sequence>
                   <xs:attribute name="NearestAirport" type="xs:string" use="required" />
                 </xs:complexType>
               </xs:element>
             </xs:sequence>
-            <xs:attribute name="Rating" type="xs:decimal" use="optional" />
+            <xs:attribute name="Rating" type="xs:string" use="optional" />
           </xs:complexType>
         </xs:element>
       </xs:sequence>
